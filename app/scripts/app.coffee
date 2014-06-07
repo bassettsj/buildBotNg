@@ -30,3 +30,11 @@ angular
         controller: 'UserCtrl'
       .otherwise
         redirectTo: '/'
+  .controller( 'MainNavigationCtrl', ($scope, $location) ->
+    $scope.isActive = (viewLocation) ->
+      console.log(viewLocation, $location.path() )
+      return viewLocation == $location.path()
+  )
+  .config( ($locationProvider) ->
+    $locationProvider.html5Mode(true)
+  )
