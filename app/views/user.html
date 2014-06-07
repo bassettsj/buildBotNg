@@ -1,0 +1,14 @@
+<h1 class="page-header">{{ isLoggedIn ? userName : "Create User" }}</h1>
+<form>
+  <fieldset>
+    <legend>{{ isLoggedIn ? "Edit User": "Create User" }}</legend>
+  </fieldset>
+  <div class="form-group">
+    <label for="username">User Name</label>
+    <input type="text" id="userName" ng-model="userName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="userPassword">Password</label>
+    <input type="password" id="userPassword" ng-value="password" class="form-control">
+  </div>
+</form>
