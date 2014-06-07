@@ -21,9 +21,9 @@ module.exports = (config) ->
       'app/bower_components/angular-route/angular-route.js'
       'app/bower_components/angular-sanitize/angular-sanitize.js'
       'app/bower_components/angular-touch/angular-touch.js'
-      'app/scripts/**/*.cs'
-      'test/mock/**/*.cs'
-      'test/spec/**/*.cs'
+      'app/scripts/**/*.coffee'
+      'test/mock/**/*.coffee'
+      'test/spec/**/*.coffee'
     ],
 
     # list of files / patterns to exclude
@@ -45,12 +45,14 @@ module.exports = (config) ->
     # - PhantomJS
     # - IE (only Windows)
     browsers: [
-      'PhantomJS'
+      'PhantomJS',
+      'Chrome'
     ]
 
     # Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher'
+      'karma-chrome-launcher'
       'karma-jasmine'
       'karma-coffee-preprocessor'
     ]
